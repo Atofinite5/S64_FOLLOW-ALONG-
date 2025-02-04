@@ -1,11 +1,10 @@
-// backend/app.js
-
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const ErrorHandler = require("./middleware/error");
+const product = require('./controller/product')
 
 const app = express();
 
@@ -16,7 +15,7 @@ app.use(cookieParser());
 // Configure CORS to allow requests from React frontend
 app.use(
   cors({
-    origin: "http://localhost:5173", // Update this if your frontend is hosted elsewhere
+    origin: "http://localhost:3000", // Update this if your frontend is hosted elsewhere
     credentials: true, // Enable if you need to send cookies or authentication headers
   })
 );
@@ -29,11 +28,12 @@ app.use("/products", express.static(path.join(__dirname, "products")));
 
 // Import Routes
 const userRoutes = require("./controller/user");
-const productRoutes = require("./controller/Product"); 
+const productRoutes = require("./controller/product");
 
 // Route Handling
 app.use("/api/v2/user", userRoutes);
 app.use("/api/v2/product", productRoutes);
+
 
 // Error Handling Middleware
 app.use(ErrorHandler);
