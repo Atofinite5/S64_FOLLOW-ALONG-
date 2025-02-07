@@ -47,7 +47,8 @@ const Signup = () => {
       },
     };
 //axios request
-    axios.post("http://localhost:8000/api/v2/user/create-user", newForm, config).then((res)=>{
+    axios.post("http://localhost:8000/api/v2/user/create-user", newForm, config)
+    .then((res)=>{
       console.log(res.data);
     }).catch((err)=>{
       console.log(err);
