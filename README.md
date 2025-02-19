@@ -147,28 +147,183 @@ This form will take multiple product images images as input
 
 Note:- This lesson will help you in understanding the basic creating of products please feel free to experiment on adding more features like creating an admin access and allow only admin to upload products or create and shop profile and a user with only shop profile can upload.
 
-Milestone 10:
 
- Creating the Product Schema and API Endpoint
-In this milestone, we focused on defining the structure of product data and creating an API endpoint to store product details in MongoDB.
-1. Product Schema Definition:
-Defined a structured product schema using Mongoose to store product data in MongoDB.
-Ensured each field has proper validation to maintain data integrity:
-Name: Required, string
-Description: Required, string
-Price: Required, number, with validation for non-negative values
-Image URL(s): Required, array of strings for multiple image storage
-Category: Required, string
-CreatedAt: Automatically generated timestamp
-2. Endpoint Creation:
-Developed a POST endpoint (/api/products) to accept product details from the frontend.
-Implemented validation to ensure only correctly formatted data is stored in the database.
-Saved product information to MongoDB using Mongoose models.
-3. Data Validation & Integrity:
-Enforced strict validation to prevent invalid or incomplete product entries.
-Returned appropriate error messages for missing or incorrect data inputs.
-4. Future Enhancements & Experimentation:
-Considered adding role-based access control:
-Admin Access: Only admin users can create new products.
-Shop Profiles: Restrict product uploads to users with a registered shop profile.
-Image Upload Handling: Implement a cloud-based solution (e.g., Cloudinary, AWS S3) for better image management. make this short
+Milestone 10 - Product Schema & Endpoint 🚀
+
+Hey Kalvians! 👋
+
+In this milestone, we’ll create a Mongoose schema for products and an endpoint to store product details in MongoDB.
+
+Learning Goals 🎯
+	•	Define a product schema with validations (name, description, price, image URL, etc.).
+	•	Create a POST endpoint to validate and save product data.
+	•	Understand why validation matters for data integrity.
+
+Steps 📝
+	1.	Define Schema: Use Mongoose to structure product data with validations.
+	2.	Create Endpoint: Build a POST route to receive, validate, and store product details.
+
+
+Milestone 11 - Dynamic Product Display 🚀
+
+Hey Kalvians! 👋
+
+In this milestone, we’ll make our homepage dynamic by displaying all products from MongoDB. We’ll create an endpoint to fetch stored products and render them using our product card component.
+
+Learning Goals 🎯
+	•	Create an endpoint to fetch product data from MongoDB.
+	•	Receive and use this data on the frontend.
+	•	Dynamically display products using components.
+
+Steps 📝
+	1.	Backend: Write an endpoint to send all product data.
+	2.	Frontend: Fetch data and display it dynamically using the product card.
+
+
+	Milestone 12 - My Products Page 🚀
+
+Hey Kalvians! 👋
+
+In this milestone, we’ll build a My Products page that displays only the products added by the logged-in user. We’ll achieve this by filtering data based on the user’s email.
+
+Learning Goals 🎯
+	•	Create an endpoint to fetch products linked to a specific email from MongoDB.
+	•	Fetch and display filtered data dynamically on the frontend.
+
+Steps 📝
+	1.	Backend: Write an endpoint to fetch products based on the user’s email.
+	2.	Frontend: Fetch and display the filtered products using the product card component.
+
+Welcome to Milestone 13! 🌟
+
+In this milestone, we will add functionality to edit uploaded products. This includes adding an Edit button and creating a backend endpoint to update product details in the MongoDB database.
+
+Learning Goals 🎯
+
+By the end of this milestone, you will learn:
+	•	How to write an endpoint to update existing data in MongoDB.
+	•	How to auto-fill a form with previous data and allow edits.
+
+Steps for Milestone 13 📝
+	1.	Backend: Create an endpoint to receive updated product data and update it in MongoDB.
+	2.	Frontend:
+	•	Add an Edit button to each product card.
+	•	On clicking Edit, populate the form with existing data.
+	•	Allow users to modify and save the changes.
+
+Note:
+
+This milestone will give you a detailed understanding of performing update operations in MongoDB.
+
+Milestone #14
+
+In this milestone, we will add a Delete button to the product card and create a backend endpoint to remove a product from MongoDB using its ID.
+
+Learning Goals 🎯
+
+By the end of this milestone, you will learn:
+	•	How to write an endpoint to delete a product using its ID in MongoDB.
+
+Steps for Milestone 14 📝
+	1.	Backend: Create an endpoint to delete a product from MongoDB using its ID.
+	2.	Frontend:
+	•	Add a Delete button to each product card.
+	•	On clicking Delete, send the product ID to the server to remove it from the database.
+
+Milestone 15: Navbar Component 🚀
+
+Learning Goals 🎯
+
+By the end of this milestone, you will:
+	•	Learn how to create a Navbar component.
+	•	Understand how to reuse a component across multiple pages.
+
+Steps 📝
+	1.	Create a Navbar component with links to:
+	•	Home
+	•	My Products
+	•	Add Product
+	•	Cart
+	2.	Make it responsive for all screen sizes.
+	3.	Add the Navbar to all pages for smooth navigation.
+
+Milestone 16: Product Info Page 🚀
+
+Learning Goals 🎯
+
+By the end of this milestone, you will:
+	•	Learn how to create a new page to display product details.
+	•	Add a quantity selector and an “Add to Cart” button.
+
+Steps 📝
+	1.	Create a Product Info Page to display all product details.
+	2.	Add a quantity selection option for users.
+	3.	Implement an “Add to Cart” button for easy purchase.
+
+Milestone 17 - Add to Cart 🛒
+
+Overview
+
+In this milestone, you’ll implement a backend endpoint to add products to a cart and store them in the database.
+
+Learning Goals 🎯
+	•	Update the user schema to store cart products.
+	•	Create an API endpoint to add product details to the cart.
+
+Steps 📝
+	1.	Define the cart schema to store products.
+	2.	Implement an endpoint to receive and store product details in the cart.
+
+Milestone 18 - Fetch Cart Products 🛒
+
+Overview
+
+In this milestone, you’ll implement a backend endpoint to fetch all products in a user’s cart for display on the cart page.
+
+Learning Goals 🎯
+	•	Create an endpoint to handle requests from the cart page.
+	•	Fetch all cart products using the user’s email.
+
+Steps 📝
+	1.	Define a backend endpoint for the cart page.
+	2.	Implement logic to retrieve products from the cart based on the user’s email.
+
+
+
+Milestone 19 - Cart Functionality 🛒
+
+Overview
+
+In this milestone, you’ll build a Cart UI and implement an endpoint to increase/decrease product quantity in the cart.
+
+Learning Goals 🎯
+	•	Display products in the cart (using the endpoint from Milestone 18).
+	•	Add + and - buttons to modify product quantity.
+	•	Create backend endpoints to update quantity.
+
+Steps 📝
+	1.	Frontend: Create a cart page and display products.
+	2.	UI Controls: Add + and - buttons for quantity updates.
+	3.	Backend: Implement an endpoint to modify product quantity.
+
+
+
+Milestone 20 - Profile Page 🏠
+
+Overview
+
+In this milestone, you’ll build a Profile Page UI and implement an endpoint to fetch and display user data.
+
+Learning Goals 🎯
+	•	Create a backend endpoint to send user data via email.
+	•	Build a frontend profile page to display user details.
+	•	Show profile photo, name, email, and addresses.
+
+Steps 📝
+	1.	Backend: Create an endpoint to send user data.
+	2.	Frontend: Develop a profile page layout.
+	3.	Display User Info:
+	•	Section 1: Profile photo, name, and email.
+	•	Section 2: Address list with an “Add Address” button.
+	•	If no address exists, show “No address found”.
+

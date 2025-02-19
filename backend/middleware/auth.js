@@ -4,7 +4,7 @@ const ErrorHandler = require("../utils/ErrorHandler");
 
 // Import the catchAsyncErrors utility
 // This is a middleware to handle errors in asynchronous functions automatically
-const catchAsyncErrors = require("../middleware/catchAsyncErrors");
+const catchAsyncErrors = require("./catchAsyncError");
 
 // Import the jsonwebtoken (JWT) library
 // This library is used for creating, signing, and verifying JSON Web Tokens
