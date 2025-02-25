@@ -327,3 +327,12 @@ Steps 📝
 	•	Section 2: Address list with an “Add Address” button.
 	•	If no address exists, show “No address found”.
 
+Milestone 21: Address Input Form
+In this milestone, we will create a frontend form for users to input their address details.
+
+Key Tasks:
+Design a form to collect country, city, address1, address2, zip code, and address type.
+Create a state to store the input address.
+Navigate to this form page when clicking "Add Address" on the profile page.
+This milestone focuses on implementing an address form for better user data management.
+
