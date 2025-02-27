@@ -336,3 +336,14 @@ Create a state to store the input address.
 Navigate to this form page when clicking "Add Address" on the profile page.
 This milestone focuses on implementing an address form for better user data management.
 
+
+### Milestone 22: Save Address in Database  
+
+In this milestone, we will create a backend endpoint to store user addresses in the database.  
+
+#### Key Tasks:  
+- Create an endpoint to receive address data from the frontend form.  
+- Add the received address to the address array inside the user collection.  
+
+This milestone focuses on implementing backend logic to store user addresses efficiently.
+
